@@ -2,8 +2,8 @@
   <rect width="800" height="600" fill="#eef1ef"/>
 
   <!-- title block -->
-  <text x="48" y="62" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="30" letter-spacing="1" fill="#171a1c">ELLIPTICAL HEAD</text>
-  <text x="48" y="88" font-family="Barlow, Segoe UI, sans-serif" font-size="15" fill="#5c666c">Dished head, 2:1 — to ASME / GB tables or to drawing</text>
+  <text x="48" y="62" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="30" letter-spacing="1" fill="#171a1c">ELLIPTICAL CAP</text>
+  <text x="48" y="88" font-family="Barlow, Segoe UI, sans-serif" font-size="15" fill="#5c666c">Pipe cap — to ASME / GB tables or to drawing</text>
   <line x1="48" y1="104" x2="752" y2="104" stroke="#d2d7d4" stroke-width="1"/>
 
   <!-- head body -->
@@ -34,7 +34,7 @@
 
   <!-- forms -->
   <text x="48" y="548" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="19" letter-spacing="0.5" fill="#171a1c">FORMS</text>
-  <text x="120" y="548" font-family="Barlow, Segoe UI, sans-serif" font-size="15" fill="#5c666c">elliptical &#183; torispherical &#183; hemispherical &#183; pipe caps</text>
+  <text x="120" y="548" font-family="Barlow, Segoe UI, sans-serif" font-size="15" fill="#5c666c">elliptical &#183; torispherical &#183; hemispherical</text>
   <text x="48" y="576" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-size="19" letter-spacing="0.5" fill="#171a1c">EDGE</text>
   <text x="120" y="576" font-family="Barlow, Segoe UI, sans-serif" font-size="15" fill="#5c666c">as ordered &#183; bevelled for welding</text>
 </svg>
