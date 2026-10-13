@@ -394,6 +394,37 @@ section.tight { padding: 44px 0; }
 
 .band .shots figcaption { color: #a7b0ac; border-top-color: #2c3336; }
 
+/* ---------- document cards (certificates) ---------- */
+
+.docs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.docs figure { margin: 0; }
+
+.docs a {
+  display: block;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.docs a:hover { border-color: var(--oxide); }
+
+.docs img { display: block; width: 100%; height: auto; }
+
+.docs figcaption {
+  font-size: 0.84rem;
+  color: var(--steel);
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+  margin-top: 9px;
+}
+
+.docs figcaption b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+
 /* ---------- detail rows (products page) ---------- */
 
 .family {
