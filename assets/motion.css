@@ -1,0 +1,77 @@
+/* ---------- motion ---------- */
+/* Subtle entrance and hover feedback. Without JS the `anim` class is never
+   added, so every block stays fully visible. */
+
+.anim .rv {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity .65s ease,
+    transform .7s cubic-bezier(.2, .7, .3, 1);
+  transition-delay: var(--rv-delay, 0ms);
+}
+
+.anim .rv.in { opacity: 1; transform: none; }
+
+/* hero entrance */
+.anim .hero h1,
+.anim .hero .lede,
+.anim .hero .actions,
+.anim .hero .specstrip {
+  animation: rv-rise .8s cubic-bezier(.2, .7, .3, 1) both;
+}
+
+.anim .hero h1 { animation-delay: .05s; }
+.anim .hero .lede { animation-delay: .16s; }
+.anim .hero .actions { animation-delay: .27s; }
+.anim .hero .specstrip { animation-delay: .38s; }
+.anim .hero img { animation: rv-zoom 2.8s cubic-bezier(.2, .6, .2, 1) both; }
+
+@keyframes rv-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes rv-zoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+
+/* hover feedback */
+.anim .btn { transition: transform .2s ease, background-color .2s ease, border-color .2s ease; }
+.anim .btn:hover { transform: translateY(-1px); }
+
+.anim .facts > div { transition: transform .35s ease, box-shadow .35s ease; }
+.anim .facts > div:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20, 34, 48, .08); }
+
+.anim .shots figure { overflow: hidden; }
+.anim .shots img { transition: transform .6s ease; }
+.anim .shots figure:hover img { transform: scale(1.035); }
+
+.anim .family img { transition: transform .6s ease; }
+.anim .family:hover img { transform: scale(1.02); }
+
+.anim .docs a { transition: border-color .2s ease, transform .2s ease; }
+.anim .docs a:hover { transform: translateY(-2px); }
+
+.anim .masthead { transition: box-shadow .3s ease; }
+.anim .masthead.is-scrolled { box-shadow: 0 10px 26px rgba(20, 34, 48, .10); }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim .rv,
+  .anim .rv.in { opacity: 1; transform: none; transition: none; }
+  .anim .hero h1,
+  .anim .hero .lede,
+  .anim .hero .actions,
+  .anim .hero .specstrip,
+  .anim .hero img { animation: none; }
+  .anim .btn:hover,
+  .anim .facts > div:hover,
+  .anim .shots figure:hover img,
+  .anim .family:hover img,
+  .anim .docs a:hover { transform: none; }
+}
+
+@media print {
+  .anim .rv { opacity: 1; transform: none; }
+}
