@@ -3,15 +3,15 @@
    Single accent (oxide red) reserved for dimension callouts and primary actions. */
 
 :root {
-  --paper: #f4f5f3;
+  --paper: #f1f3f1;
   --surface: #ffffff;
-  --ink: #171a1c;
-  --steel: #5c666c;
-  --line: #d2d7d4;
-  --oxide: #a33a1f;
-  --oxide-deep: #7c2a14;
-  --band: #1d2226;
-  --band-ink: #c9d1cd;
+  --ink: #15191b;
+  --steel: #5a6469;
+  --line: #d9dedb;
+  --oxide: #9c3a1e;
+  --oxide-deep: #78290f;
+  --band: #191e21;
+  --band-ink: #c6cfca;
   --display: "Barlow Condensed", "Arial Narrow", "Microsoft YaHei", sans-serif;
   --body: "Barlow", "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
 }
@@ -764,4 +764,97 @@ footer a:hover { text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
+}
+
+/* ---------- refinement: mill-finish detail ---------- */
+/* Larger display type, hairlines in place of boxes, and a wider rhythm.
+   The oxide accent stays reserved for dimension marks and primary actions. */
+
+h1 { font-size: clamp(2.7rem, 5.6vw, 4.3rem); line-height: .97; letter-spacing: -.005em; }
+h2 { font-size: clamp(1.75rem, 2.9vw, 2.4rem); line-height: 1.04; }
+h3 { font-size: 1.2rem; line-height: 1.28; }
+
+body { line-height: 1.65; }
+.wrap { max-width: 1200px; padding: 0 24px; }
+
+.topbar .wrap { min-height: 36px; }
+.masthead .wrap { min-height: 78px; gap: 22px; }
+.wordmark { font-size: 1.62rem; }
+
+/* hero: a left scrim keeps the type crisp while the photo stays the subject */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(11,15,17,.88) 0%, rgba(11,15,17,.66) 44%, rgba(11,15,17,.20) 80%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  right: 30px;
+  width: 28px;
+  height: 28px;
+  border-top: 1px solid rgba(255,255,255,.42);
+  border-right: 1px solid rgba(255,255,255,.42);
+}
+
+.hero .wrap { z-index: 3; padding-top: 96px; padding-bottom: 80px; }
+.hero h1 { max-width: 18ch; }
+.hero .lede { max-width: 52ch; color: #e7ebe9; }
+.specstrip { margin-top: 40px; border-top-color: rgba(255,255,255,.24); padding-top: 18px; }
+.specstrip div span { color: #a3aea9; }
+
+/* actions */
+.btn { border-radius: 0; padding: 13px 24px; font-size: .93rem; letter-spacing: .01em; }
+.btn.on-dark { border-color: rgba(255,255,255,.55); }
+.btn.on-dark:hover { border-color: #fff; background: rgba(255,255,255,.09); }
+
+/* section rhythm */
+section { padding: 78px 0; }
+section.tight { padding: 56px 0; }
+.sechead { margin-bottom: 42px; }
+.sechead p { max-width: 62ch; }
+
+/* product table: rules instead of a box */
+.index-table {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--ink);
+  font-size: .93rem;
+}
+
+.index-table th,
+.index-table td { padding: 20px 18px; border-bottom: 1px solid var(--line); }
+
+.index-table thead th {
+  background: transparent;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: .72rem;
+  letter-spacing: .09em;
+}
+
+.index-table tbody tr { transition: background-color .2s ease; }
+.index-table tbody tr:hover { background: var(--surface); }
+.index-table caption { padding-bottom: 14px; }
+
+/* fact grid */
+.facts { border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.facts > div { padding: 28px 26px; }
+
+@media (max-width: 900px) {
+  .hero .wrap { padding-top: 64px; padding-bottom: 56px; }
+  section { padding: 56px 0; }
+  section.tight { padding: 44px 0; }
+  .sechead { margin-bottom: 32px; }
+  h1 { font-size: clamp(2.2rem, 8vw, 3.1rem); }
+  .index-table th, .index-table td { padding: 16px 14px; }
+}
+
+@media (max-width: 640px) {
+  .index-table caption { display: block; width: 100%; }
 }

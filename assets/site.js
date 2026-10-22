@@ -29,7 +29,7 @@
     return;
   }
 
-  var selector = '.sechead, .index-table tbody tr, .facts > div, .shots figure, .docs figure, .family, .famindex li, .spec-list li';
+  var selector = '.facts > div, .shots figure, .docs figure, .family';
   var items = [].slice.call(document.querySelectorAll(selector));
   var seen = new Map();
 
