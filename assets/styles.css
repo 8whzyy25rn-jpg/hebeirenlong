@@ -858,3 +858,33 @@ section.tight { padding: 56px 0; }
 @media (max-width: 640px) {
   .index-table caption { display: block; width: 100%; }
 }
+
+/* quieter section labels: no decorative rule, just a small label */
+.dim {
+  gap: 0;
+  color: var(--steel);
+  font-size: .76rem;
+  letter-spacing: .07em;
+}
+
+.dim::before,
+.dim::after { display: none; }
+
+.sechead .dim { margin-bottom: 10px; }
+
+/* interior pages open on the same graphite band as the hero */
+.pagehead {
+  background: var(--band);
+  color: #fff;
+  padding: 84px 0 60px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.pagehead .sechead { margin-bottom: 0; }
+.pagehead .dim { color: #94a09a; margin-bottom: 14px; }
+.pagehead h1 { font-size: clamp(2.2rem, 4.2vw, 3.3rem); max-width: 22ch; color: #fff; }
+.pagehead .sechead p { color: #c2cbc6; max-width: 60ch; }
+
+@media (max-width: 900px) {
+  .pagehead { padding: 56px 0 42px; }
+}
