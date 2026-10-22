@@ -3,15 +3,15 @@
    Single accent (oxide red) reserved for dimension callouts and primary actions. */
 
 :root {
-  --paper: #f1f3f1;
-  --surface: #ffffff;
-  --ink: #15191b;
-  --steel: #5a6469;
-  --line: #d9dedb;
-  --oxide: #9c3a1e;
-  --oxide-deep: #78290f;
-  --band: #191e21;
-  --band-ink: #c6cfca;
+  --paper: #121617;
+  --surface: #171c1f;
+  --ink: #e8ecea;
+  --steel: #98a39f;
+  --line: #2a3134;
+  --oxide: #c0502a;
+  --oxide-deep: #a3401f;
+  --band: #0c0f10;
+  --band-ink: #c2cbc6;
   --display: "Barlow Condensed", "Arial Narrow", "Microsoft YaHei", sans-serif;
   --body: "Barlow", "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
 }
@@ -308,7 +308,7 @@ section.tight { padding: 44px 0; }
 }
 
 .index-table thead th {
-  background: #eceeec;
+  background: #1a2023;
   font-size: 0.74rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -331,7 +331,7 @@ section.tight { padding: 44px 0; }
   height: 60px;
   object-fit: cover;
   flex: 0 0 60px;
-  background: #e8ebe9;
+  background: #202628;
 }
 
 .index-table .fam strong { display: block; font-weight: 600; }
@@ -363,8 +363,8 @@ section.tight { padding: 44px 0; }
 .facts h3 { margin-bottom: 8px; }
 .facts p { font-size: 0.92rem; color: var(--steel); }
 
-.band .facts { background: #2c3336; border-color: #2c3336; }
-.band .facts > div { background: var(--band); }
+.band .facts { background: #1a2023; border-color: #1a2023; }
+.band .facts > div { background: #14191b; }
 .band .facts p { color: #a7b0ac; }
 
 /* ---------- photo strip ---------- */
@@ -381,7 +381,7 @@ section.tight { padding: 44px 0; }
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  background: #e8ebe9;
+  background: #202628;
 }
 
 .shots figcaption {
@@ -407,7 +407,7 @@ section.tight { padding: 44px 0; }
 .docs a {
   display: block;
   padding: 8px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
 }
 
@@ -436,7 +436,7 @@ section.tight { padding: 44px 0; }
 }
 
 .family:last-of-type { border-bottom: none; }
-.family img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #e8ebe9; }
+.family img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #202628; }
 
 .spec-list {
   list-style: none;
@@ -483,7 +483,7 @@ section.tight { padding: 44px 0; }
 }
 
 .data th {
-  background: #eceeec;
+  background: #1a2023;
   font-size: 0.74rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -717,14 +717,14 @@ footer a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
-.famindex a:hover { background: #fafbfa; }
+.famindex a:hover { background: #1d2427; }
 .famindex a:hover .fi-name { color: var(--oxide); }
 
 .famindex img {
   width: 96px;
   height: 68px;
   object-fit: cover;
-  background: #e8ebe9;
+  background: #202628;
 }
 
 .famindex .fi-name {
@@ -884,6 +884,8 @@ section.tight { padding: 56px 0; }
 .pagehead .dim { color: #94a09a; margin-bottom: 14px; }
 .pagehead h1 { font-size: clamp(2.2rem, 4.2vw, 3.3rem); max-width: 22ch; color: #fff; }
 .pagehead .sechead p { color: #c2cbc6; max-width: 60ch; }
+
+.band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
 @media (max-width: 900px) {
   .pagehead { padding: 56px 0 42px; }
