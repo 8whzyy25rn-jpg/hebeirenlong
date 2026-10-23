@@ -45,7 +45,20 @@
 .anim .shots img { transition: transform .9s cubic-bezier(.2, .7, .3, 1); }
 .anim .shots figure.rv img { transform: scale(1.05); }
 .anim .shots figure.rv.in img { transform: scale(1); }
-.anim .shots figure.rv.in:hover img { transform: scale(1.035); }
+.anim .shots figure.rv.in:hover img { transform: scale(1.05); }
+
+/* every other image answers the pointer too */
+.anim .family { overflow: hidden; }
+.anim .family img { transition: transform .7s cubic-bezier(.2, .7, .3, 1); }
+.anim .family:hover img { transform: scale(1.05); }
+
+.anim .famindex a { overflow: hidden; }
+.anim .famindex img { transition: transform .5s cubic-bezier(.2, .7, .3, 1); }
+.anim .famindex a:hover img { transform: scale(1.08); }
+
+.anim .docs a { overflow: hidden; }
+.anim .docs img { transition: transform .7s cubic-bezier(.2, .7, .3, 1); }
+.anim .docs a:hover img { transform: scale(1.03); }
 
 .anim .masthead { transition: box-shadow .3s ease; }
 .anim .masthead.is-scrolled { box-shadow: 0 10px 26px rgba(20, 34, 48, .10); }
@@ -59,7 +72,10 @@
   .anim .hero .specstrip,
   .anim .hero img { animation: none; }
   .anim .btn:hover,
-  .anim .shots figure:hover img { transform: none; }
+  .anim .shots figure.rv.in:hover img,
+  .anim .family:hover img,
+  .anim .famindex a:hover img,
+  .anim .docs a:hover img { transform: none; }
 }
 
 @media print {

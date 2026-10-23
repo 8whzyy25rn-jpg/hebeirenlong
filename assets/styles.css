@@ -919,7 +919,7 @@ section.tight { padding: 56px 0; }
   transition: transform .6s ease;
 }
 
-.range-card:hover img { transform: scale(1.03); }
+.range-card:hover img { transform: scale(1.06); }
 
 .range-body { padding: 22px 24px 26px; }
 
