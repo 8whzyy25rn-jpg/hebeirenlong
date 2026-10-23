@@ -51,3 +51,49 @@
 
   items.forEach(function (el) { io.observe(el); });
 })();
+
+// Hero banner: crossfade between three photos, refresh the text block.
+(function () {
+  var hero = document.getElementById('hero');
+  if (!hero) return;
+
+  var slides = [].slice.call(hero.querySelectorAll('.hero-media img'));
+  var dots = [].slice.call(hero.querySelectorAll('.hero-dots button'));
+  var wrap = hero.querySelector('.wrap');
+  if (slides.length < 2) return;
+
+  var index = 0;
+  var timer = null;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function show(n) {
+    slides[index].classList.remove('is-on');
+    if (dots[index]) dots[index].classList.remove('is-on');
+    index = (n + slides.length) % slides.length;
+    slides[index].classList.add('is-on');
+    if (dots[index]) dots[index].classList.add('is-on');
+    if (wrap) {
+      wrap.classList.remove('swap');
+      void wrap.offsetWidth;
+      wrap.classList.add('swap');
+    }
+  }
+
+  function stop() {
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+
+  function play() {
+    if (still) return;
+    stop();
+    timer = setInterval(function () { show(index + 1); }, 6500);
+  }
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { show(i); play(); });
+  });
+
+  hero.addEventListener('mouseenter', stop);
+  hero.addEventListener('mouseleave', play);
+  play();
+})();

@@ -25,10 +25,23 @@
 .anim .hero .lede { animation-delay: .16s; }
 .anim .hero .actions { animation-delay: .27s; }
 .anim .hero .specstrip { animation-delay: .38s; }
-.anim .hero img { animation: rv-zoom 2.8s cubic-bezier(.2, .6, .2, 1) both; }
+.anim .hero-media img { transition: opacity 1.1s ease; }
+.anim .hero-media img.is-on { animation: hero-kb 7s ease-out both; }
+
+.anim .hero .wrap.swap { animation: hero-swap .8s cubic-bezier(.2, .7, .3, 1) both; }
 
 @keyframes rv-rise {
   from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes hero-kb {
+  from { transform: scale(1); }
+  to   { transform: scale(1.07); }
+}
+
+@keyframes hero-swap {
+  from { opacity: .3; transform: translateY(10px); }
   to   { opacity: 1; transform: none; }
 }
 
@@ -70,7 +83,8 @@
   .anim .hero .lede,
   .anim .hero .actions,
   .anim .hero .specstrip,
-  .anim .hero img { animation: none; }
+  .anim .hero-media img { animation: none; }
+  .anim .hero .wrap.swap { animation: none; }
   .anim .btn:hover,
   .anim .shots figure.rv.in:hover img,
   .anim .family:hover img,

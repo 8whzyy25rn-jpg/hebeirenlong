@@ -802,6 +802,30 @@ body { line-height: 1.65; }
   border-right: 1px solid rgba(255,255,255,.42);
 }
 
+.hero-media { position: absolute; inset: 0; overflow: hidden; }
+.hero-media img { opacity: 0; }
+.hero-media img.is-on { opacity: .5; }
+
+.hero-dots {
+  position: absolute;
+  right: 26px;
+  bottom: 24px;
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dots button {
+  width: 28px;
+  height: 3px;
+  padding: 0;
+  border: 0;
+  background: rgba(255,255,255,.28);
+  cursor: pointer;
+}
+
+.hero-dots button.is-on { background: #fff; }
+
 .hero .wrap { z-index: 3; padding-top: 96px; padding-bottom: 80px; }
 .hero h1 { max-width: 18ch; }
 .hero .lede { max-width: 52ch; color: #e7ebe9; }
