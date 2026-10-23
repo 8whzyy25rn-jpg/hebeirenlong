@@ -1123,3 +1123,101 @@ section.tight { padding: 56px 0; }
   .range-card:hover img { transform: none; }
   .range-card:hover { transform: none; }
 }
+
+/* ---------- product cards: white grid with a blue top rule ---------- */
+/* Matches the reference template's product grid: white card, blue rule,
+   photo on top, centred title and copy, "view more" affordance. */
+
+.range {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+.range-card,
+.range-section .range-card {
+  position: relative;
+  padding: 16px 16px 20px;
+  background: #fff;
+  border: 1px solid #e6e9ec;
+  border-top: 2px solid #16337a;
+  border-radius: 0;
+  color: inherit;
+  overflow: hidden;
+}
+
+.range-card:hover,
+.range-section .range-card:hover {
+  border-color: #cfd8e2;
+  transform: translateY(-4px);
+}
+
+.range-card img,
+.range-section .range-card img { aspect-ratio: 4 / 3; filter: none; }
+
+.range-body,
+.range-section .range-body {
+  position: static;
+  padding: 16px 2px 0;
+  background: none;
+  text-align: center;
+}
+
+.range-meta,
+.range-section .range-meta { color: #7b8794; margin-bottom: 6px; }
+
+.range-body h3,
+.range-section .range-body h3 {
+  color: #16337a;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.range-card:hover h3 { color: #f26a1b; }
+
+.range-body p,
+.range-section .range-body p {
+  color: #5f6b74;
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.range-card:not(.range-cta) .range-body::after {
+  content: "View more \2192";
+  display: block;
+  margin-top: 12px;
+  color: #7b8794;
+  font-size: .8rem;
+}
+
+.range-cta,
+.range-section .range-cta {
+  display: flex;
+  align-items: center;
+  background: #16337a;
+  border-color: #16337a;
+}
+
+.range-cta::before { display: none; }
+.range-cta .range-body { padding: 24px; }
+.range-section .range-cta h3 { color: #fff; font-size: 1.35rem; }
+.range-section .range-cta p { color: #d7deee; }
+.range-section .range-cta .range-meta { color: #9fb0d8; }
+.range-cta-link { color: #ffb27a; border-bottom-color: #ffb27a; }
+
+.range-nav { display: none; }
+
+@media (max-width: 1100px) {
+  .range { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+  .range { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .range { grid-template-columns: 1fr; }
+}
