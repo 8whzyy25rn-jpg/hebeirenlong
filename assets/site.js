@@ -29,7 +29,7 @@
     return;
   }
 
-  var selector = '.facts > div, .shots figure, .docs figure, .family';
+  var selector = '.facts > div, .shots figure, .docs figure, .family, .range-card';
   var items = [].slice.call(document.querySelectorAll(selector));
   var seen = new Map();
 
@@ -93,7 +93,7 @@
   function play() {
     if (still) return;
     stop();
-    timer = setInterval(function () { show(index + 1); }, 5500);
+    timer = setInterval(function () { show(index + 1); }, 3500);
   }
 
   dots.forEach(function (dot, i) {
@@ -103,4 +103,44 @@
   hero.addEventListener('mouseenter', stop);
   hero.addEventListener('mouseleave', play);
   play();
+})();
+
+// Product carousel: horizontal snap list with arrows and dots.
+(function () {
+  var range = document.querySelector('.range');
+  if (!range) return;
+
+  var cards = [].slice.call(range.querySelectorAll('.range-card'));
+  var prev = document.querySelector('.range-prev');
+  var next = document.querySelector('.range-next');
+  var dotsWrap = document.querySelector('.range-dots');
+  if (!cards.length || !prev || !next || !dotsWrap) return;
+
+  function step() {
+    var gap = parseFloat(getComputedStyle(range).columnGap) || 30;
+    return cards[0].getBoundingClientRect().width + gap;
+  }
+
+  var dots = cards.map(function (card, i) {
+    var dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', 'Go to product ' + (i + 1));
+    dot.addEventListener('click', function () {
+      range.scrollTo({ left: step() * i, behavior: 'smooth' });
+    });
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function update() {
+    var i = Math.round(range.scrollLeft / step());
+    dots.forEach(function (dot, j) { dot.classList.toggle('is-on', j === i); });
+    prev.disabled = range.scrollLeft <= 2;
+    next.disabled = range.scrollLeft >= range.scrollWidth - range.clientWidth - 2;
+  }
+
+  prev.addEventListener('click', function () { range.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function () { range.scrollBy({ left: step(), behavior: 'smooth' }); });
+  range.addEventListener('scroll', update, { passive: true });
+  update();
 })();

@@ -61,6 +61,10 @@
 .anim .shots figure.rv.in:hover img { transform: scale(1.05); }
 
 /* every other image answers the pointer too */
+.anim .range-card.rv img { transform: scale(1.04); }
+.anim .range-card.rv.in img { transform: scale(1); }
+.anim .range-card.rv.in:hover img { transform: scale(1.06); }
+
 .anim .family { overflow: hidden; }
 .anim .family img { transition: transform .7s cubic-bezier(.2, .7, .3, 1); }
 .anim .family:hover img { transform: scale(1.05); }
@@ -89,7 +93,9 @@
   .anim .shots figure.rv.in:hover img,
   .anim .family:hover img,
   .anim .famindex a:hover img,
-  .anim .docs a:hover img { transform: none; }
+  .anim .docs a:hover img,
+  .anim .range-card.rv img,
+  .anim .range-card.rv.in:hover img { transform: none; }
 }
 
 @media print {
