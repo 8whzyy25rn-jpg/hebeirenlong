@@ -42,8 +42,10 @@
 .anim .btn:hover { transform: translateY(-1px); }
 
 .anim .shots figure { overflow: hidden; }
-.anim .shots img { transition: transform .6s ease; }
-.anim .shots figure:hover img { transform: scale(1.035); }
+.anim .shots img { transition: transform .9s cubic-bezier(.2, .7, .3, 1); }
+.anim .shots figure.rv img { transform: scale(1.05); }
+.anim .shots figure.rv.in img { transform: scale(1); }
+.anim .shots figure.rv.in:hover img { transform: scale(1.035); }
 
 .anim .masthead { transition: box-shadow .3s ease; }
 .anim .masthead.is-scrolled { box-shadow: 0 10px 26px rgba(20, 34, 48, .10); }
