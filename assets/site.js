@@ -64,8 +64,6 @@
 
   var index = 0;
   var timer = null;
-  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   // Load the other two slides after the first paint.
   window.addEventListener('load', function () {
     slides.forEach(function (img) {
@@ -91,7 +89,6 @@
   }
 
   function play() {
-    if (still) return;
     stop();
     timer = setInterval(function () { show(index + 1); }, 3500);
   }

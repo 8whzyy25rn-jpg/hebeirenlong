@@ -80,24 +80,6 @@
 .anim .masthead { transition: box-shadow .3s ease; }
 .anim .masthead.is-scrolled { box-shadow: 0 10px 26px rgba(20, 34, 48, .10); }
 
-@media (prefers-reduced-motion: reduce) {
-  .anim .rv,
-  .anim .rv.in { opacity: 1; transform: none; transition: none; }
-  .anim .hero h1,
-  .anim .hero .lede,
-  .anim .hero .actions,
-  .anim .hero .specstrip,
-  .anim .hero-media img { animation: none; }
-  .anim .hero .wrap.swap { animation: none; }
-  .anim .btn:hover,
-  .anim .shots figure.rv.in:hover img,
-  .anim .family:hover img,
-  .anim .famindex a:hover img,
-  .anim .docs a:hover img,
-  .anim .range-card.rv img,
-  .anim .range-card.rv.in:hover img { transform: none; }
-}
-
 @media print {
   .anim .rv { opacity: 1; transform: none; }
 }
