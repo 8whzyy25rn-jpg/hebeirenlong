@@ -66,6 +66,13 @@
   var timer = null;
   var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Load the other two slides after the first paint.
+  window.addEventListener('load', function () {
+    slides.forEach(function (img) {
+      if (!img.src && img.dataset.src) img.src = img.dataset.src;
+    });
+  });
+
   function show(n) {
     slides[index].classList.remove('is-on');
     if (dots[index]) dots[index].classList.remove('is-on');
@@ -86,7 +93,7 @@
   function play() {
     if (still) return;
     stop();
-    timer = setInterval(function () { show(index + 1); }, 6500);
+    timer = setInterval(function () { show(index + 1); }, 5500);
   }
 
   dots.forEach(function (dot, i) {

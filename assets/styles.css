@@ -2,6 +2,46 @@
    Design language: mill test certificate / fabrication drawing.
    Single accent (oxide red) reserved for dimension callouts and primary actions. */
 
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/barlow-400.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/barlow-500.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/barlow-600.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/barlow-condensed-500.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/barlow-condensed-600.woff2) format("woff2");
+}
+
 :root {
   --paper: #121617;
   --surface: #171c1f;
@@ -963,7 +1003,7 @@ section.tight { padding: 56px 0; }
   position: relative;
   display: flex;
   align-items: flex-end;
-  background: url(img/workshop.jpg) center / cover;
+  background: url(img/workshop.webp) center / cover;
 }
 
 .range-cta::before {
