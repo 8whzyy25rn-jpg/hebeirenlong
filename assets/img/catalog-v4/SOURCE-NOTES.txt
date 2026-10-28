@@ -1,0 +1,17 @@
+Product category images used on the public site.
+
+Sources:
+- pipe-tubes.webp: existing product image candidate pipe-good-11.jpg
+- butt-weld-fittings.webp: watertrucks.com carbon-steel butt-weld tee product photo
+- flanges.webp: gxfitting.com weld-neck flange product photo
+- forged-fittings.webp: nerop-nero-gob2b.b-cdn.net 6000 LB socket-weld elbow photo
+- pipe-caps.webp: fushunsteeltube.com butt-weld cap product photo
+- custom-fabrication.webp: Renlong tubesheet photograph with background removed
+
+Selection criteria:
+- clean white or white-cut presentation
+- no visible website address, telephone number, shop watermark, or brand overlay
+- product form remains clear at the card size used on the site
+
+These images identify product form. Do not describe them as confirmed stock or
+as a completed customer order.
