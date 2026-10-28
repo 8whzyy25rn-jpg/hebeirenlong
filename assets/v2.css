@@ -343,10 +343,11 @@
 .v2 .range-section .range-card img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
-  padding: 0;
-  object-fit: cover;
-  background: #e7ebe9;
+  padding: 22px;
+  object-fit: contain;
+  background: #fff;
   filter: none;
 }
 

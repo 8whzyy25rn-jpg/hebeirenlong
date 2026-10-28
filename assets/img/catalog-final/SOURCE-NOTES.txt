@@ -1,0 +1,16 @@
+Selected for the first-site product grid from the image candidates researched
+during the interrupted redesign task.
+
+Selected files:
+- pipe-tubes.webp: image-candidates/pipe-good-11.jpg
+- butt-weld-fittings.webp: image-candidates/elbow-cand-13.jpg
+- flanges.webp: image-candidates/flange-good-12.png
+- forged-fittings.webp: image-candidates/forged-good-02.jpg
+
+Selection criteria:
+- visible product on a clean white background
+- no website address, telephone number, shop watermark, or brand overlay
+- source pixels retained; the selected files were only converted to WebP
+
+These images identify product form. Do not describe them as confirmed stock or
+as a completed customer order.
