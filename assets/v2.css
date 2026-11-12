@@ -1193,7 +1193,7 @@
 
 .v2-contact-layout {
   display: grid;
-  grid-template-columns: .72fr 1.28fr;
+  grid-template-columns: 1fr;
   gap: clamp(42px, 7vw, 90px);
   padding: 76px 0 100px;
   align-items: start;
